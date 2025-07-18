@@ -13,3 +13,55 @@
   </a>
 </p>
 
+## Project Setup (Laravel 10)
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd order_processing
+```
+
+### 2. Install dependencies
+```bash
+composer install
+```
+
+### 3. Copy and configure environment file
+```bash
+cp .env.example .env
+# Edit .env as needed (DB, etc.)
+```
+
+### 4. Generate application key
+```bash
+php artisan key:generate
+```
+
+### 5. Run migrations and seeders
+```bash
+php artisan migrate --seed
+```
+
+### 6. Start the development server
+```bash
+php artisan serve
+```
+
+---
+
+## Example: Run the Orders API
+
+To create a new order via the API, use the following `curl` command:
+
+```bash
+curl --location 'http://localhost:8000/api/orders' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--data '{
+  "user_id": 9,
+  "product_id": 149,
+  "quantity": 2
+}'
+```
+
+---
