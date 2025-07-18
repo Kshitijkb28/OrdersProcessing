@@ -17,8 +17,8 @@
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd order_processing
+git clone https://github.com/Kshitijkb28/OrdersProcessing.git
+cd OrdersProcessing
 ```
 
 ### 2. Install dependencies
